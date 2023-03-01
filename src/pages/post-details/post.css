@@ -1,0 +1,33 @@
+.post__wrapper {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+.card {
+  padding: 5px;
+  margin: 10px 0px;
+  border-radius:10px;
+  width: 90%;
+  background: linear-gradient(135deg, #8052ec, #d161ff);
+  color: #fff;
+}
+
+.post__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px 0px;
+}
+.post__points {
+  font-size: 11px;
+  font-weight: 600;
+  margin: 5px 0px;
+}
+.post__comments {
+  font-size: 11px;
+  font-weight: 600;
+  margin: 5px 0px;
+}
