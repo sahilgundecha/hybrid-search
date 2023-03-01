@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
-const url = "http://hn.algolia.com/api/v1/search?";
+const url = "https://hn.algolia.com/api/v1/search?";
 const Dashboard = (e) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);

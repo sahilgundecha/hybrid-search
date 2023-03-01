@@ -9,7 +9,7 @@ const PostDetails = () => {
 
   const fetchPost = () => {
     const postId = location.state.postId;
-    fetch(`http://hn.algolia.com/api/v1/items/${postId}`)
+    fetch(`https://hn.algolia.com/api/v1/items/${postId}`)
       .then((data) => data.json())
       .then((res) => {
         console.log(res);
