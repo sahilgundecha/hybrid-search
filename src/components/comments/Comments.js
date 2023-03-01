@@ -14,7 +14,7 @@ const Comments = ({ post }) => {
       </div>
 
       <div className="child">
-        {post?.children?.map((child)=><Comments post={child}/>)}
+        {post?.children?.filter((pos)=>pos.title && pos.points)?.map((child)=><Comments post={child}/>)}
       </div>
       </>
   );

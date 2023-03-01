@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./post.css";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Comments from "../../components/comments/Comments";
 
 const PostDetails = () => {
   const [post, setPost] = useState([]);
-  const location = useLocation();
+  const { id } = useParams();
 
   const fetchPost = () => {
-    const postId = location.state.postId;
-    fetch(`https://hn.algolia.com/api/v1/items/${postId}`)
+    fetch(`https://hn.algolia.com/api/v1/items/${id}`)
       .then((data) => data.json())
       .then((res) => {
         console.log(res);
@@ -22,7 +21,11 @@ const PostDetails = () => {
 
   return (
     <div className="post__wrapper">
-      <Comments post={post} />
+      {Object?.keys(post)?.length != 0 ? (
+        <Comments post={post} />
+      ) : (
+        "Loading Post Please Wait..."
+      )}
     </div>
   );
 };
